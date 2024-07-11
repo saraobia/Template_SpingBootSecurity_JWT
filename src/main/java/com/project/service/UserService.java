@@ -1,9 +1,6 @@
 package com.project.service;
 
-import com.project.exception.UserGenericsException;
-import com.project.exception.UserMailWrongException;
-import com.project.exception.UserNotFoundException;
-import com.project.exception.UserPasswordWrongException;
+import com.project.exception.*;
 import com.project.model.User;
 import com.project.repository.UserRepository;
 import com.project.service.interfaces.UserFunctions;
@@ -45,7 +42,14 @@ public class UserService implements UserFunctions {
     }
 
     @Override
-    public Optional<User> getUserById(int idUser) throws UserNotFoundException {
+    public Optional<User> getUserInfoById(int id) throws UserNotFoundException {
+        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Error"));
+        String idUser = user.getId().toString(); //UFF
+        return Optional.of(user);
+    }
+
+    @Override
+    public Optional<User> getUserInfoById(String id) throws UserNotFoundException {
         return Optional.empty();
     }
 }

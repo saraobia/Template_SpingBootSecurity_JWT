@@ -4,33 +4,115 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0198005c-0ad7-439a-b1af-6cfc210ed1d0" name="Changes" comment="" />
+    <list default="true" id="0198005c-0ad7-439a-b1af-6cfc210ed1d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/DEV.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/PROD.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/TEST.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/web-api.2024-07-11.0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/model/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/utils/ObjectMapperUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/web-api.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/web-api.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/SecurityProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/BaseProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/dto/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/dto/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/service/interfaces/UserFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/service/interfaces/UserFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/utils/DbInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/utils/DbInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/SecurityProjectApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/config/ExceptionHandlerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/config/ExceptionHandlerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/config/JwtConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/config/JwtConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/config/SecurityExceptionHandlerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/config/SecurityExceptionHandlerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/config/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/config/SwaggerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/exception/ExceptionResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/exception/ExceptionResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/exception/UserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/exception/UserException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/exception/UserGenericsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/exception/UserGenericsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/exception/UserMailWrongException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/exception/UserMailWrongException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/exception/UserNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/exception/UserNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/exception/UserPasswordWrongException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/exception/UserPasswordWrongException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/filters/AuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/filters/AuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/filters/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/filters/JwtAuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/AuthRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/model/AuthRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/dto/AuthenticationResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/enums/ErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/model/enums/ErrorCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/enums/ExitCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/model/enums/ExitCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/enums/RoleCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/model/enums/RoleCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/repository/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/response/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/response/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/response/SuccessResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/response/SuccessResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/service/AuthenticationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/service/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/service/interfaces/UserFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/service/interfaces/UserFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/utils/ApiUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/utils/ApiUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/utils/DbInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/utils/DbInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/utils/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/utils/JwtUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/utils/SessionInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/utils/SessionInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/SecurityProjectApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/project/SecurityProjectApplicationTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2j5nCZJf8ZiipJQJ9UQiqh09IdL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/SaraObia/IdeaProjects/base_pro_BE"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.DEV.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SecurityProjectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/SaraObia/IdeaProjects/base_pro_BE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.quicklists&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DEV">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="base_pro_BE" />
       <method v="2">
@@ -44,6 +126,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.TEST" />
+      <item itemvalue="Application.PROD" />
+      <item itemvalue="Application.DEV" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -55,5 +142,8 @@
       <updated>1720685679823</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
