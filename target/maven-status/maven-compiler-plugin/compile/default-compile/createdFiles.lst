@@ -1,0 +1,3 @@
+com/project/model/User$UserBuilder.class
+com/project/model/dto/AuthenticationResponse$AuthenticationResponseBuilder.class
+com/project/model/Role$RoleBuilder.class
