@@ -32,7 +32,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @RequiredArgsConstructor
 public class WebSecurityConfig implements WebMvcConfigurer {
 
-
     @Autowired
     private UserDetailsService userDetailsService;
 
@@ -47,7 +46,7 @@ public class WebSecurityConfig implements WebMvcConfigurer {
         http.sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider());
 
-       http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         http.authorizeHttpRequests(request ->
                 request.requestMatchers(ApiUtils.PERMIT_ALL).permitAll()

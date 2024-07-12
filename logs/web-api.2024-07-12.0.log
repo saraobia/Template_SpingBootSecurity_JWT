@@ -1,0 +1,206 @@
+2024-07-12 10:16:51 [] [INFO ]: c.project.SecurityProjectApplication - Starting SecurityProjectApplication using Java 22.0.1 with PID 15166 (/Users/SaraObia/IdeaProjects/SecurityProject/target/classes started by SaraObia in /Users/SaraObia/IdeaProjects/SecurityProject)
+2024-07-12 10:16:51 [] [INFO ]: c.project.SecurityProjectApplication - The following 1 profile is active: "dev"
+2024-07-12 10:16:51 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-12 10:16:51 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-12 10:16:52 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12 10:16:52 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2024-07-12 10:16:53 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-12 10:16:53 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-12 10:16:53 [] [INFO ]: o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-12 10:16:53 [] [INFO ]: o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-12 10:16:53 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-12 10:16:53 [] [INFO ]: o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1895 ms
+2024-07-12 10:16:54 [] [INFO ]: o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12 10:16:54 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-12 10:16:55 [] [INFO ]: com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d2ac319
+2024-07-12 10:16:55 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-12 10:16:56 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 10:16:57 [] [INFO ]: o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-12 10:16:58 [] [INFO ]: o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-12 10:16:59 [] [INFO ]: o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-12 10:16:59 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-12 10:16:59 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-12 10:16:59 [] [INFO ]: c.project.SecurityProjectApplication - Started SecurityProjectApplication in 8.342 seconds (process running for 8.944)
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByRoleCode]: This method is not transactional.
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:16:59 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:17:04 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-12 10:17:04 [] [INFO ]: o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-12 10:17:04 [] [INFO ]: o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-12 10:17:05 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [INFO ]: o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 357 ms
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - User not found with email: pippo@mail.it
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.service.CustomUserDetailsService.lambda$loadUserByUsername$0(CustomUserDetailsService.java:30)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - java.base/java.util.Optional.orElseThrow(Optional.java:403)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.service.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:30)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:107)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.service.AuthenticationService.authentication(AuthenticationService.java:45)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.controller.AuthController.login(AuthController.java:33)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+2024-07-12 10:17:35 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+2024-07-12 10:19:38 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:19:38 [sessionId=CAB2FD0FE1BBE4816BE9CBB70C183178] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:20:03 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:20:03 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:20:03 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:20:03 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:42:04 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 10:42:04 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-12 10:42:05 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-12 10:42:08 [] [INFO ]: c.project.SecurityProjectApplication - Starting SecurityProjectApplication using Java 22.0.1 with PID 15547 (/Users/SaraObia/IdeaProjects/SecurityProject/target/classes started by SaraObia in /Users/SaraObia/IdeaProjects/SecurityProject)
+2024-07-12 10:42:08 [] [INFO ]: c.project.SecurityProjectApplication - The following 1 profile is active: "dev"
+2024-07-12 10:42:08 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-12 10:42:08 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-12 10:42:09 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12 10:42:09 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2024-07-12 10:42:10 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-12 10:42:10 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-12 10:42:10 [] [INFO ]: o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-12 10:42:10 [] [INFO ]: o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-12 10:42:10 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-12 10:42:10 [] [INFO ]: o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1605 ms
+2024-07-12 10:42:10 [] [INFO ]: o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12 10:42:10 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-12 10:42:11 [] [INFO ]: com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@541e0084
+2024-07-12 10:42:11 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-12 10:42:12 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 10:42:12 [] [INFO ]: o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-12 10:42:12 [] [INFO ]: o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-12 10:42:13 [] [INFO ]: o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-12 10:42:13 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-12 10:42:13 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-12 10:42:13 [] [INFO ]: c.project.SecurityProjectApplication - Started SecurityProjectApplication in 5.777 seconds (process running for 6.295)
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByRoleCode]: This method is not transactional.
+2024-07-12 10:42:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:42:14 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:42:14 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:44:52 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 10:44:52 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-12 10:44:52 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-12 10:44:54 [] [INFO ]: c.project.SecurityProjectApplication - Starting SecurityProjectApplication using Java 22.0.1 with PID 15663 (/Users/SaraObia/IdeaProjects/SecurityProject/target/classes started by SaraObia in /Users/SaraObia/IdeaProjects/SecurityProject)
+2024-07-12 10:44:54 [] [INFO ]: c.project.SecurityProjectApplication - The following 1 profile is active: "dev"
+2024-07-12 10:44:54 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-12 10:44:54 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-12 10:44:55 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-12 10:44:55 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+2024-07-12 10:44:56 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-12 10:44:56 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-12 10:44:56 [] [INFO ]: o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-12 10:44:56 [] [INFO ]: o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-12 10:44:56 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-12 10:44:56 [] [INFO ]: o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1628 ms
+2024-07-12 10:44:56 [] [INFO ]: o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-12 10:44:57 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-12 10:44:57 [] [INFO ]: com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d967696
+2024-07-12 10:44:57 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-12 10:44:58 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 10:44:59 [] [INFO ]: o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-12 10:44:59 [] [INFO ]: o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-12 10:45:00 [] [INFO ]: o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-12 10:45:00 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-12 10:45:00 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-12 10:45:00 [] [INFO ]: c.project.SecurityProjectApplication - Started SecurityProjectApplication in 6.491 seconds (process running for 7.034)
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByRoleCode]: This method is not transactional.
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:45:00 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-12 10:45:04 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-12 10:45:04 [] [INFO ]: o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-12 10:45:04 [] [INFO ]: o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-12 10:45:05 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [INFO ]: o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 428 ms
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - User not found with email: pippo@mail
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.service.CustomUserDetailsService.lambda$loadUserByUsername$0(CustomUserDetailsService.java:30)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - java.base/java.util.Optional.orElseThrow(Optional.java:403)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.service.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:30)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:107)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.service.AuthenticationService.authentication(AuthenticationService.java:50)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - com.project.controller.AuthController.login(AuthController.java:34)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+2024-07-12 10:45:40 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+2024-07-12 10:46:09 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:10 [sessionId=AF94EF4C39389760836E7A7CFB7180E3] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:26 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:26 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:26 [sessionId=DF1DBFB7944A728B4472495A633789AA] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:26 [sessionId=DF1DBFB7944A728B4472495A633789AA] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:29 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:29 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:29 [sessionId=C4F89517820A8E7C8045ADD7DA8A0F8B] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:29 [sessionId=C4F89517820A8E7C8045ADD7DA8A0F8B] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:30 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:30 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:30 [sessionId=FDD753B1B68A9999161329572FEB695E] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:30 [sessionId=FDD753B1B68A9999161329572FEB695E] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:32 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:32 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:32 [sessionId=DD3FF6DB44F2A5CA3098ED8BB1F1A449] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:32 [sessionId=DD3FF6DB44F2A5CA3098ED8BB1F1A449] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:34 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:34 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:34 [sessionId=406F0DA59D94049A353ADA653A19D9CF] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:34 [sessionId=406F0DA59D94049A353ADA653A19D9CF] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:37 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:37 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:37 [sessionId=BE03066D8A7813F35D326DE2D3F10A95] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:46:37 [sessionId=BE03066D8A7813F35D326DE2D3F10A95] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:47:58 [sessionId=BE03066D8A7813F35D326DE2D3F10A95] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:47:58 [sessionId=BE03066D8A7813F35D326DE2D3F10A95] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:18 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:18 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:18 [sessionId=BE508EC1090A3AF6FA6F53B781E4FD2E] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:18 [sessionId=BE508EC1090A3AF6FA6F53B781E4FD2E] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:25 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:25 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:25 [sessionId=D64A1101E7D3DFBBC58C2109EF243638] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:48:25 [sessionId=D64A1101E7D3DFBBC58C2109EF243638] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:49:03 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:49:03 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:49:03 [sessionId=377F80912944E3A9EA9111E2E590C831] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 10:49:03 [sessionId=377F80912944E3A9EA9111E2E590C831] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-12 12:11:20 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-12 12:11:20 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-12 12:11:20 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

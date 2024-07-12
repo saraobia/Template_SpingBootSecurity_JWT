@@ -34,52 +34,15 @@ public class DbInitializer implements CommandLineRunner {
         if (!roleRepository.existsByRoleCode(RoleCode.ROLE_ADMIN)) {
             roleRepository.save(Role.builder().role(RoleCode.ROLE_ADMIN).build());
         }
-
         Role roleAdmin = roleRepository.findByRoleCode(RoleCode.ROLE_ADMIN).orElseThrow();
-        Role roleUser = roleRepository.findByRoleCode(RoleCode.ROLE_USER).orElseThrow();
-
-        List<User> users = List.of(
-                User.builder()
-                        .email("pippo@mail.com")
-                        .password(passwordEncoder.encode("1234"))
-                        .name("Pippo")
-                        .surname("Rossi")
-                        .roles(List.of(roleAdmin))
-                        .build(),
-                User.builder()
-                        .email("pluto@mail.com")
-                        .password(passwordEncoder.encode("5678"))
-                        .name("Pluto")
-                        .surname("Bianchi")
-                        .roles(List.of(roleUser))
-                        .build(),
-                User.builder()
-                        .email("paperino@mail.com")
-                        .password(passwordEncoder.encode("abcd"))
-                        .name("Paperino")
-                        .surname("Verdi")
-                        .roles(List.of(roleUser))
-                        .build(),
-                User.builder()
-                        .email("minnie@mail.com")
-                        .password(passwordEncoder.encode("efgh"))
-                        .name("Minnie")
-                        .surname("Neri")
-                        .roles(List.of(roleUser))
-                        .build(),
-                User.builder()
-                        .email("topolino@mail.com")
-                        .password(passwordEncoder.encode("ijkl"))
-                        .name("Topolino")
-                        .surname("Gialli")
-                        .roles(List.of(roleAdmin))
-                        .build()
-        );
-
-        for (User user : users) {
-            if (userRepository.findByEmail(user.getEmail()).isEmpty()) {
-                userRepository.save(user);
-            }
+        if(userRepository.findByEmail("pippo@mail.it").isEmpty()) {
+            userRepository.save(User.builder()
+                    .email("pippo@mail.com")
+                    .password(passwordEncoder.encode("1234"))
+                    .name("Pippo")
+                    .surname("Rossi")
+                    .roles(List.of(roleAdmin))
+                    .build());
         }
     }
 }

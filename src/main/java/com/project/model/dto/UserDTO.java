@@ -1,13 +1,21 @@
 package com.project.model.dto;
 
-import lombok.*;
+import jakarta.persistence.Column;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
-@AllArgsConstructor
+@Data
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserDTO {
-    private String id;
-    private String email;
+
+    private Integer id;
+
     private String name;
+    private String email;
+
+    private String surname;
 }

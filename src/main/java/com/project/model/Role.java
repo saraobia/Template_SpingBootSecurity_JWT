@@ -22,6 +22,7 @@ public class Role {
     @Column(name = "id")
     private Integer id;
 
+    //TODO: unique true?
     @Enumerated(EnumType.STRING)
     @Column(name = "role", unique = true)
     private RoleCode role;
