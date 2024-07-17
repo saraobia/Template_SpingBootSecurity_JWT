@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "application.security",
+      "type": "com.project.config.JwtConfig",
+      "sourceType": "com.project.config.JwtConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "application.security.jwt-expired-access-token",
+      "type": "java.lang.Integer",
+      "sourceType": "com.project.config.JwtConfig"
+    },
+    {
+      "name": "application.security.jwt-expired-refresh-token",
+      "type": "java.lang.Integer",
+      "sourceType": "com.project.config.JwtConfig"
+    },
+    {
+      "name": "application.security.jwt-secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.project.config.JwtConfig"
+    }
+  ],
+  "hints": []
+}

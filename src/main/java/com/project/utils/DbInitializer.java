@@ -35,12 +35,12 @@ public class DbInitializer implements CommandLineRunner {
             roleRepository.save(Role.builder().role(RoleCode.ROLE_ADMIN).build());
         }
         Role roleAdmin = roleRepository.findByRoleCode(RoleCode.ROLE_ADMIN).orElseThrow();
-        if(userRepository.findByEmail("pippo@mail.it").isEmpty()) {
+        if(userRepository.findByEmail("user@mail").isEmpty()) {
             userRepository.save(User.builder()
-                    .email("pippo@mail.com")
-                    .password(passwordEncoder.encode("1234"))
-                    .name("Pippo")
-                    .surname("Rossi")
+                    .email("user@mail")
+                    .password(passwordEncoder.encode("prova1234"))
+                    .name("User")
+                    .surname("Surname")
                     .roles(List.of(roleAdmin))
                     .build());
         }
