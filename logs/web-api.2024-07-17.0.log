@@ -81,3 +81,6 @@
 2024-07-17 15:33:44 [sessionId=497FD7D242F24EA750FF553C1E735CAB] [ERROR]: c.p.config.ExceptionHandlerConfig - org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
 2024-07-17 15:34:03 [sessionId=497FD7D242F24EA750FF553C1E735CAB] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
 2024-07-17 15:34:03 [sessionId=497FD7D242F24EA750FF553C1E735CAB] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-17 15:37:37 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-17 15:37:37 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-17 15:37:37 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
