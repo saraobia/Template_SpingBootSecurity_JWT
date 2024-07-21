@@ -29,3 +29,78 @@
 2024-07-18 09:01:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
 2024-07-18 09:01:13 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
 2024-07-18 09:01:13 [] [INFO ]: o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-07-18 09:15:21 [] [INFO ]: com.project.BaseProjectApplication - Starting BaseProjectApplication using Java 22.0.1 with PID 3577 (/Users/SaraObia/IdeaProjects/base_pro/target/classes started by SaraObia in /Users/SaraObia/IdeaProjects/base_pro)
+2024-07-18 09:15:21 [] [INFO ]: com.project.BaseProjectApplication - The following 1 profile is active: "test"
+2024-07-18 09:15:21 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-18 09:15:21 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-18 09:15:22 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-18 09:15:22 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+2024-07-18 09:15:22 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-18 09:15:22 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-18 09:15:22 [] [INFO ]: o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-18 09:15:22 [] [INFO ]: o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-18 09:15:23 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-18 09:15:23 [] [INFO ]: o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1718 ms
+2024-07-18 09:15:23 [] [INFO ]: o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-18 09:15:23 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-18 09:15:23 [] [INFO ]: com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77e9dd9f
+2024-07-18 09:15:23 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-18 09:15:25 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-18 09:15:25 [] [INFO ]: o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-18 09:15:25 [] [INFO ]: o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-18 09:15:26 [] [INFO ]: o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-18 09:15:26 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-18 09:15:26 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-18 09:15:26 [] [INFO ]: com.project.BaseProjectApplication - Started BaseProjectApplication in 6.213 seconds (process running for 6.818)
+2024-07-18 09:15:26 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-18 09:15:26 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 09:15:26 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 09:15:26 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-18 09:15:27 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 09:15:27 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 09:15:27 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByRoleCode]: This method is not transactional.
+2024-07-18 09:15:27 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-18 09:15:27 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 09:15:27 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 09:16:07 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-18 09:16:07 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-18 09:16:07 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-18 17:21:37 [] [INFO ]: com.project.BaseProjectApplication - Starting BaseProjectApplication using Java 22.0.1 with PID 13200 (/Users/SaraObia/IdeaProjects/base_pro/target/classes started by SaraObia in /Users/SaraObia/IdeaProjects/base_pro)
+2024-07-18 17:21:37 [] [INFO ]: com.project.BaseProjectApplication - The following 1 profile is active: "test"
+2024-07-18 17:21:37 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-18 17:21:37 [] [INFO ]: o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-18 17:21:38 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-18 17:21:38 [] [INFO ]: o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
+2024-07-18 17:21:39 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-07-18 17:21:39 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-07-18 17:21:39 [] [INFO ]: o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-18 17:21:39 [] [INFO ]: o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-18 17:21:39 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-18 17:21:39 [] [INFO ]: o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2235 ms
+2024-07-18 17:21:40 [] [INFO ]: o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-18 17:21:40 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-07-18 17:21:41 [] [INFO ]: com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e091e2b
+2024-07-18 17:21:41 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-18 17:21:42 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-18 17:21:43 [] [INFO ]: o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-18 17:21:43 [] [INFO ]: o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-07-18 17:21:44 [] [INFO ]: o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-18 17:21:44 [] [INFO ]: o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-07-18 17:21:44 [] [INFO ]: o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-07-18 17:21:44 [] [INFO ]: com.project.BaseProjectApplication - Started BaseProjectApplication in 8.161 seconds (process running for 8.954)
+2024-07-18 17:21:44 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-18 17:21:44 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 17:21:44 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 17:21:45 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.existsByRoleCode]: This method is not transactional.
+2024-07-18 17:21:45 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 17:21:45 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 17:21:45 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByRoleCode]: This method is not transactional.
+2024-07-18 17:21:45 [] [TRACE]: o.s.t.i.TransactionInterceptor - No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2024-07-18 17:21:45 [] [TRACE]: o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 17:21:45 [] [TRACE]: o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2024-07-18 17:21:58 [] [INFO ]: o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-18 17:21:58 [] [INFO ]: o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-18 17:21:58 [] [INFO ]: o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-07-18 17:28:36 [] [INFO ]: o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-18 17:28:36 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-18 17:28:36 [] [INFO ]: com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
