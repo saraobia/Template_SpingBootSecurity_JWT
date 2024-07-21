@@ -37,8 +37,8 @@ public class DbInitializer implements CommandLineRunner {
         Role roleAdmin = roleRepository.findByRoleCode(RoleCode.ROLE_ADMIN).orElseThrow();
         if(userRepository.findByEmail("user@mail").isEmpty()) {
             userRepository.save(User.builder()
-                    .email("user@mail")
-                    .password(passwordEncoder.encode("prova1234"))
+                    .email("@")
+                    .password(passwordEncoder.encode("12"))
                     .name("User")
                     .surname("Surname")
                     .roles(List.of(roleAdmin))
