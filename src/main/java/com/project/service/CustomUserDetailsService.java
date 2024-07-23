@@ -50,7 +50,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         String token = authHeader.substring(7);
         String email = jwtUtils.extractEmail(token);
-        //OTTIREN USER DA TOEKN
+        //OTTIENI USER DA TOEKN
         UserDetails userDetails = this.loadUserByUsername(email);
 
         //VERIFICARE CHE ACCES TOKEN E USER DETAIL CORRISPONDANO

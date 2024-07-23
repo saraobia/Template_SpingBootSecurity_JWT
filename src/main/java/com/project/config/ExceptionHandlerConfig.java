@@ -32,7 +32,6 @@ public class ExceptionHandlerConfig {
 
     private static final Logger log = LoggerFactory.getLogger(ExceptionHandlerConfig.class);
 
-
     @ExceptionHandler({UserException.class, InternalAuthenticationServiceException.class})
     public ResponseEntity<ErrorResponse> handleUserException(UserException e) {
         logStacktrace(e.getResponse(), e);
