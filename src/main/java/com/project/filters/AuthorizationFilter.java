@@ -41,16 +41,16 @@ public class AuthorizationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(
-            @NonNull HttpServletRequest request,
-            @NonNull HttpServletResponse response,
-            @NonNull FilterChain filterChain) throws ServletException, IOException {
+                                    @NonNull HttpServletRequest request,
+                                    @NonNull HttpServletResponse response,
+                                    @NonNull FilterChain filterChain) throws ServletException, IOException {
 
         try {
-            if(Arrays.stream(ApiUtils.PERMIT_ALL).anyMatch(value -> request.getServletPath().startsWith(value.replace(
-                    "/**", ""
-            )))
-                    ) {
-                filterChain.doFilter(request, response);
+            if(Arrays
+                    .stream(ApiUtils.PERMIT_ALL)
+                    .anyMatch(value -> request.getServletPath().startsWith(value.replace(
+                    "/**", "")))) {
+                    filterChain.doFilter(request, response);
             } else {
                 String authorization = request.getHeader(HttpHeaders.AUTHORIZATION);
                 if(authorization != null && authorization.startsWith("Bearer ")) {

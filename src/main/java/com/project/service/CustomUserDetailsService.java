@@ -31,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 new ErrorResponse(ErrorCode.EUN, "User not found with email: " + email)
         ));
     }
-
+    // Caricando user DTO da mandare al client
     public UserDTO loadUser(HttpServletRequest request) {
         User user = getUserFromToken(request);
         return UserDTO.builder()
@@ -50,7 +50,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         String token = authHeader.substring(7);
         String email = jwtUtils.extractEmail(token);
-        //OTTIREN USER DA TOEKN
+        //OTTIENI USER DA TOEKN
         UserDetails userDetails = this.loadUserByUsername(email);
 
         //VERIFICARE CHE ACCES TOKEN E USER DETAIL CORRISPONDANO

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/BaseProjectApplication.java
+=======
+/Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/BaseProject.java
+>>>>>>> 2b4e2419f6517288d5be1a3c6dedd5e7fd9045ec
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/config/ExceptionHandlerConfig.java
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/config/JwtConfig.java
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/config/SecurityExceptionHandlerConfig.java
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/config/SwaggerConfig.java
+<<<<<<< HEAD
+=======
+/Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/config/WebConfig.java
+>>>>>>> 2b4e2419f6517288d5be1a3c6dedd5e7fd9045ec
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/config/WebSecurityConfig.java
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/controller/AuthController.java
 /Users/SaraObia/IdeaProjects/base_pro/src/main/java/com/project/controller/UserController.java

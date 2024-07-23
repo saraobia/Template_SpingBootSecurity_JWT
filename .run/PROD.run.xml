@@ -1,7 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="PROD" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="com.project.BaseProjectApplication" />
-    <module name="BaseProject" />
+
+    <option name="MAIN_CLASS_NAME" value="com.project.BaseProject" />
+    <module name="SecurityProject" />
     <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=prod" />
     <extension name="coverage">
       <pattern>

@@ -5,29 +5,37 @@ import com.project.model.User;
 import com.project.model.enums.RoleCode;
 import com.project.repository.RoleRepository;
 import com.project.repository.UserRepository;
-import org.apache.catalina.startup.UserConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 @Component
 public class DbInitializer implements CommandLineRunner {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    RoleRepository roleRepository;
+    private RoleRepository roleRepository;
 
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
+
+
 
     @Override
     public void run(String... args) throws Exception {
 
+        initializeRolesAndUsers();
+
+    }
+
+    private void initializeRolesAndUsers() {
         if (!roleRepository.existsByRoleCode(RoleCode.ROLE_USER)) {
             roleRepository.save(Role.builder().role(RoleCode.ROLE_USER).build());
         }
@@ -35,6 +43,7 @@ public class DbInitializer implements CommandLineRunner {
             roleRepository.save(Role.builder().role(RoleCode.ROLE_ADMIN).build());
         }
         Role roleAdmin = roleRepository.findByRoleCode(RoleCode.ROLE_ADMIN).orElseThrow();
+
         if(userRepository.findByEmail("user@mail").isEmpty()) {
             userRepository.save(User.builder()
                     .email("user@mail")
@@ -43,6 +52,11 @@ public class DbInitializer implements CommandLineRunner {
                     .surname("Surname")
                     .roles(List.of(roleAdmin))
                     .build());
+
+        Role roleUser = roleRepository.findByRoleCode(RoleCode.ROLE_USER).orElseThrow();
+
         }
+
     }
+
 }

@@ -47,6 +47,7 @@ public class AuthenticationService {
     private CustomUserDetailsService customUserDetailsService;
 
     public AuthenticationResponse authentication(AuthRequest request) {
+        //Verifica le credenziali dell'utente e restituisce un token di autenticazione
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
         );

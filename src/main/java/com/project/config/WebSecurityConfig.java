@@ -48,6 +48,7 @@ public class WebSecurityConfig implements WebMvcConfigurer {
 
         http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
+        //Filtro per verificare chiamate autorizzate e non
         http.authorizeHttpRequests(request ->
                 request.requestMatchers(ApiUtils.PERMIT_ALL).permitAll()
                        .requestMatchers(ApiUtils.PERMIT_ALL).hasAnyAuthority(RoleCode.ROLE_USER.name())
