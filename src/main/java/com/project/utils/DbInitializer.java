@@ -30,9 +30,7 @@ public class DbInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
         initializeRolesAndUsers();
-
     }
 
     private void initializeRolesAndUsers() {
@@ -43,20 +41,37 @@ public class DbInitializer implements CommandLineRunner {
             roleRepository.save(Role.builder().role(RoleCode.ROLE_ADMIN).build());
         }
         Role roleAdmin = roleRepository.findByRoleCode(RoleCode.ROLE_ADMIN).orElseThrow();
-
-        if(userRepository.findByEmail("user@mail").isEmpty()) {
-            userRepository.save(User.builder()
-                    .email("user@mail")
-                    .password(passwordEncoder.encode("prova1234"))
-                    .name("Name")
-                    .surname("Surname")
-                    .roles(List.of(roleAdmin))
-                    .build());
-
         Role roleUser = roleRepository.findByRoleCode(RoleCode.ROLE_USER).orElseThrow();
 
+        if(userRepository.findByEmail("admin@mail.com").isEmpty()) {
+            userRepository.save(User.builder()
+                    .email("admin@mail.com")
+                    .password(passwordEncoder.encode("pasw123"))
+                    .name("Admin")
+                    .surname("User")
+                    .roles(List.of(roleAdmin))
+                    .build());
         }
 
+        if(userRepository.findByEmail("user@mail.com").isEmpty()) {
+            userRepository.save(User.builder()
+                    .email("user@mail.com")
+                    .password(passwordEncoder.encode("user1234"))
+                    .name("Regular")
+                    .surname("User")
+                    .roles(List.of(roleUser))
+                    .build());
+        }
+
+        if(userRepository.findByEmail("empty@mail.com").isEmpty()) {
+            userRepository.save(User.builder()
+                    .email("empty@mail.com")
+                    .password(passwordEncoder.encode("empty1234"))
+                    .name("Empty")
+                    .surname("User")
+                    .roles(List.of(roleUser))
+                    .build());
+        }
     }
 
 }
