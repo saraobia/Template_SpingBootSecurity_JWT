@@ -30,9 +30,7 @@ public class DbInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
         initializeRolesAndUsers();
-
     }
 
     private void initializeRolesAndUsers() {
@@ -47,8 +45,8 @@ public class DbInitializer implements CommandLineRunner {
 
         if(userRepository.findByEmail("admin@mail.com").isEmpty()) {
             userRepository.save(User.builder()
-                    .email("@")
-                    .password(passwordEncoder.encode("12"))
+                    .email("admin@mail.com")
+                    .password(passwordEncoder.encode("pasw123"))
                     .name("Admin")
                     .surname("User")
                     .roles(List.of(roleAdmin))
