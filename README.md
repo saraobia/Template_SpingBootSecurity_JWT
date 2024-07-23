@@ -1,4 +1,387 @@
-# Guida all'autenticazione sicura con SpringSecurity e JWT Token
+# Secure Authentication Guide with Spring Security and JWT Token (EN)
+
+## Introduction
+This guide describes the implementation of a secure authentication system using Spring Security and JWT (JSON Web Tokens) in a Spring Boot application.
+JWT is an open standard method (RFC 7519) for creating secure access tokens that can be easily verified and decoded.
+This guide covers the following aspects:
+
+1. Configuring Spring Security for authentication and authorization.
+2. Generating and validating JWT tokens.
+3. Protecting resources with JWT.
+4. Handling security exceptions.
+
+## Prerequisites
+
+* **Java 21**
+* **Maven 3.9.8**
+* **Spring Boot 3.3.1**
+* **MySQL 8.0 or higher**
+
+## Required Maven Dependencies
+
+The pom.xml file includes the following key dependencies:
+
+1. Spring Boot Starter (Web, Data JPA, Security)
+2. MySQL Connector
+3. Lombok
+4. JSON Web Token (JWT)
+5. SpringDoc OpenAPI (for Swagger and API documentation)
+
+### Project Setup
+
+1. Clone the repository from GitHub:
+2. Configure the database: The `application-dev.properties` file contains the configuration for the MySQL database:
+
+```
+### properties for dev profile ###
+
+spring.datasource.url=jdbc:mysql://localhost:3306/base_database?createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8
+spring.datasource.username=root
+spring.datasource.password=^Dvx&5hFzH&s#i
+
+spring.jpa.hibernate.ddl-auto=create-drop
+```
+3. Configure environment variables (for JWT secret key):
+```
+### properties for dev profile ###
+
+application.security.jwt-secret-key=amh2amhiamhndmhqZmN2aGd2aHZodmhndmhqNDU2NzhzZHNoY2JmaGRlYmYyMjIy
+
+application.security.jwt-expired-access-token=86400000
+application.security.jwt-expired-refresh-token=172800000
+
+```
+4. Run the Spring Boot application: `mvn spring-boot:run -Dspring.profiles.active=DEV`.
+
+* Considerations:
+1. The database is automatically created if it doesn't exist *(createDatabaseIfNotExist=true)*.
+2. The create-drop mode recreates the database on each application start. Useful for development, but not for production.
+3. Database credentials are exposed in the configuration file. In a production environment, these should be managed more securely (e.g., environment variables).
+
+#### Database Initialization
+
+The `DbInitializer` class is responsible for populating the database with initial data:
+
+Creates predefined roles (ROLE_USER, ROLE_ADMIN).
+Creates example users with assigned roles.
+
+##### Key Points:
+
+Uses *CommandLineRunner* to execute initialization at application startup.
+Checks for the existence of roles/users before creating them to avoid duplicates.
+Uses PasswordEncoder to hash user passwords.
+
+# Overview of JWT Authentication
+
+## Structure
+
+<img src="src/main/resources/structure.png" alt="proj_structure" width="600"/>
+
+The application architecture is organized in a modular way to separate responsibilities and facilitate maintenance. Here's an overview of the main components:
+
+### Main Components of Security Schema
+
+1. **JWT Configuration (`JwtConfig.java`)**:
+   - Contains configuration properties for JWT such as the secret key and token duration.
+   - Defines the names of JWT token fields.
+
+2. **JWT Utility (`JwtUtils.java`)**:
+   - Contains methods for generating, validating, and extracting information from JWT tokens.
+
+3. **Security Configuration (`WebSecurityConfig.java`)**:
+   - Configures the security filter chain.
+   - Disables CSRF.
+   - Configures session management as stateless.
+   - Adds the JWT filter (`JwtAuthFilter`) before Spring's authentication filter (`UsernamePasswordAuthenticationFilter`).
+   - Configures exception handlers for denied access.
+   - Configures the authentication provider (`DaoAuthenticationProvider`).
+
+4. **JWT Authentication Filter (`JwtAuthFilter.java`)**:
+   - Extends `OncePerRequestFilter`.
+   - Extracts the JWT token from the request header.
+   - Validates the token and sets authentication in the security context.
+   - Handles expired JWT exceptions.
+
+5. **Authorization Filter (`AuthorizationFilter.java`)**:
+   - Extends `OncePerRequestFilter`.
+   - Extracts roles and permissions from the authenticated user.
+   - Verifies required roles for accessing resources.
+   - Handles access denied exceptions.
+
+6. **Security Exception Handling (`SecurityExceptionHandlerConfig.java`)**:
+   - Handles security exceptions and sends customized error responses.
+
+
+## Authentication Process and JWT Token Generation
+
+## Login and Token Generation
+
+1. **Login Request**
+   - The user sends a POST request to `/api/auth/login` with credentials (email and password).
+   - The request is handled by the `login()` method in `AuthController`.
+
+2. **Authentication**
+   - `AuthenticationService.authentication()` is called with the user's credentials.
+   - The method uses `AuthenticationManager` to verify the credentials:
+
+     ```java
+     authenticationManager.authenticate(
+         new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
+     );
+     ```
+   - *Creating Authentication Token*: A UsernamePasswordAuthenticationToken object is created using the email and password provided in the request (request.getEmail() and request.getPassword())
+   - *Authentication*: The authenticationManager object calls the authenticate method passing the newly created authentication token. This method verifies the user's credentials.
+   - *Credential Verification*: The AuthenticationManager uses an AuthenticationProvider (such as DaoAuthenticationProvider) to load the user details (e.g., from a database) and compare the provided password with the stored one.
+   - *Setting Security Context*: If authentication is successful, Spring's security context is updated with the authenticated user's information, making it available for the entire session.
+
+   - If authentication fails, an exception is thrown.
+
+3. **User Retrieval**
+   - If authentication is successful, the user is retrieved from the database:
+     ```java
+     User user = userRepository.findByEmail(request.getEmail())
+             .orElseThrow(() -> new AuthException(new ErrorResponse(ErrorCode.EUN, "user with email not found")));
+     ```
+
+4. **Token Generation**
+   - Two tokens are generated using `JwtUtils`:
+      - Access Token: `jwtUtils.generateToken(user)`
+      - Refresh Token: `jwtUtils.generateRefreshToken(user)`
+
+5. **JWT Token Creation**
+   - The `buildToken()` method in `JwtUtils` creates the JWT token:
+     ```java
+     return Jwts.builder()
+             .setClaims(extraClaims)
+             .setId(String.valueOf(user.getId()))
+             .setSubject(user.getUsername())
+             .setIssuedAt(new Date(System.currentTimeMillis()))
+             .setExpiration(new Date(System.currentTimeMillis() + expiration))
+             .signWith(getSignInKey(), SignatureAlgorithm.HS256)
+             .compact();
+     ```
+
+6. **Response**
+   - The generated tokens are returned to the client in an `AuthenticationResponse` object.
+
+## Checking Authenticated Calls
+
+For subsequent calls that require authentication, the process is as follows:
+
+1. **Request Interception**
+   - Each request passes through `JwtAuthFilter`, which extends `OncePerRequestFilter`.
+
+2. **JwtAuthFilter**
+   - The filter extracts the JWT token from the "Authorization" header:
+     ```java
+     final String authHeader = request.getHeader("Authorization");
+     if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+         // Handling the case where the token is not present
+     }
+     jwt = authHeader.substring(7);
+     ```
+
+3. **Token Validation**
+   - The token is validated using `JwtUtils`:
+     ```java
+     username = jwtUtils.extractEmail(jwt);
+     if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+         UserDetails userDetails = customUserDetailsService.loadUserByUsername(username);
+         if (jwtUtils.isTokenValid(jwt, userDetails)) {
+             // Valid token, proceed with authentication
+         }
+     }
+     ```
+
+4. **Setting Authentication**
+   - If the token is valid, a `UsernamePasswordAuthenticationToken` is created and set in the `SecurityContextHolder`:
+     ```java
+     UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+         userDetails, null, userDetails.getAuthorities());
+     authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+     SecurityContextHolder.getContext().setAuthentication(authToken);
+     ```
+5. **AuthorizationFilter**
+- Checks if the request is directed to a public endpoint:
+
+```java
+if(Arrays.stream(ApiUtils.PERMIT_ALL).anyMatch(value ->
+request.getServletPath().startsWith(value.replace("/**", "")))) {
+filterChain.doFilter(request, response);
+return;
+}
+```
+- If it's not a public endpoint, proceeds with token verification.
+
+
+6. **In-depth Token Verification**
+
+- Extracts the token and user email again:
+```java
+String token = authorization.substring("Bearer ".length());
+String email = jwtUtils.extractEmail(token);
+``` 
+
+- Loads user details using `CustomUserDetailsService`:
+```java
+UserDetails user = userDetailsService.loadUserByUsername(email);
+```
+
+7. **Loading User Details**
+
+`CustomUserDetailsService.loadUserByUsername()` is called:
+```java
+public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+return userRepository.findByEmail(email).orElseThrow(() -> new UserException(
+new ErrorResponse(ErrorCode.EUN, "User not found with email: " + email)
+));
+}
+``` 
+- This method retrieves the complete user from the database.
+
+
+8. **Final Validation and Authentication Setting**
+
+- Further verifies the token validity:
+```java
+if (jwtUtils.isTokenValid(token, user)) {
+UsernamePasswordAuthenticationToken authToken =
+new UsernamePasswordAuthenticationToken(email, user.getPassword(), user.getAuthorities());
+authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+SecurityContextHolder.getContext().setAuthentication(authToken);
+```
+
+- Sets the complete authentication in the `SecurityContextHolder` with all user details.
+
+9. **Request Continuation**
+
+- If all checks pass, the request proceeds to the desired controller.
+
+- This process ensures that only requests with a valid JWT token can access the application's protected resources.
+
+
+# Exception Handling
+
+The system implements robust and customized exception handling to ensure consistent and informative responses in case of errors.
+
+## Main Components
+
+### 1. ExceptionHandlerConfig
+
+This class is annotated with `@RestControllerAdvice` and handles various exceptions at the global level of the application.
+
+Main exceptions handled:
+- `UserException` and `InternalAuthenticationServiceException`
+- `NoHandlerFoundException`
+- `MethodArgumentNotValidException`
+- `HttpMessageNotReadableException`
+- `MissingRequestHeaderException`
+- `BadCredentialsException`
+- `NoSuchElementException`
+- `UsernameNotFoundException`
+- `ExpiredJwtException`
+
+Each exception is mapped to an appropriate `ErrorResponse`.
+
+### 2. SecurityExceptionHandlerConfig
+
+Specifically handles security exceptions, providing a formatted JSON response.
+
+```java
+@Component
+public class SecurityExceptionHandlerConfig {
+    public void handle(HttpServletResponse response, ErrorResponse errorResponse) throws IOException {
+        // Formats and sends the error response
+    }
+}
+```
+
+### 3. ErrorCode
+
+An enum that defines standardized error codes used in the application:
+
+```java
+public enum ErrorCode {
+    FB("Forbidden", HttpStatus.FORBIDDEN, ExitCode.KO),
+    UA("Unauthorized", HttpStatus.UNAUTHORIZED, ExitCode.KO),
+    INT("Invalid Token", HttpStatus.UNAUTHORIZED, ExitCode.KO),
+    EXT("Expired Token", HttpStatus.UNAUTHORIZED, ExitCode.KO),
+    // ... other error codes
+}
+```
+
+### 4. ErrorResponse
+
+A class that structures the error response:
+
+```java
+public class ErrorResponse {
+    private ErrorCode errorCode;
+    private String message;
+    private HttpStatus status;
+    private Integer statusCode;
+    // ... constructors and methods
+}
+```
+
+## Exception Handling Flow
+
+1. **Exception Throwing**: An exception is thrown during code execution.
+
+2. **Interception**: `ExceptionHandlerConfig` intercepts the exception.
+
+3. **Mapping**: The exception is mapped to an appropriate `ErrorCode`.
+
+4. **Response Creation**: An `ErrorResponse` object is created with error details.
+
+5. **Logging**: Error details are logged for debugging.
+
+6. **Response Sending**: The error response is sent to the client in JSON format.
+
+## Handling Examples
+
+### Handling Expired JWT
+
+```java
+@ExceptionHandler(ExpiredJwtException.class)
+public ResponseEntity<ErrorResponse> expiredJwtException(ExpiredJwtException e) {
+    ErrorResponse errorResponse = new ErrorResponse(ErrorCode.EXT, getMessage(e));
+    logStacktrace(errorResponse, e);
+    return new ResponseEntity<>(errorResponse, errorResponse.getStatus());
+}
+```
+
+### Handling Invalid Credentials
+
+```java
+@ExceptionHandler(BadCredentialsException.class)
+public ResponseEntity<ErrorResponse> badCredentialsException(BadCredentialsException e) {
+    ErrorResponse errorResponse = new ErrorResponse(ErrorCode.EBC, getMessage(e));
+    logStacktrace(errorResponse, e);
+    return new ResponseEntity<>(errorResponse, errorResponse.getStatus());
+}
+```
+
+## Implemented Best Practices
+
+1. **Error Standardization**: Use of `ErrorCode` to standardize error messages.
+2. **Detailed Logging**: Recording of stack trace for effective debugging.
+3. **Consistent Responses**: All error responses follow the same format.
+4. **Security**: Errors do not expose sensitive system details.
+
+## Considerations for Improvement
+
+- Implement a mechanism for translating error messages into different languages.
+- Add more details in logs to facilitate monitoring and analysis of errors in production.
+- Consider implementing a notification system for critical errors.
+
+### Testing APIs with Swagger
+
+Swagger is integrated into the application to test APIs and view documentation. You can access Swagger at `http://localhost:8080/swagger-ui.html`.
+
+<img src="src/main/resources/swagger.png" alt="Swagger" width="600"/>
+
+# Guida all'autenticazione sicura con SpringSecurity e JWT Token (ITA)
 ## Introduzione
 Questa guida descrive l'implementazione di un sistema di autenticazione sicuro utilizzando Spring Security e JWT (JSON Web Tokens) in un'applicazione Spring Boot. 
 JWT è un metodo standard aperto (RFC 7519) per la creazione di token di accesso sicuri che possono essere verificati e decodificati facilmente. 
@@ -78,7 +461,7 @@ Utilizza PasswordEncoder per hashare le password degli utenti.La classe DbInitia
 
 ## Struttura 
 
-<img src="src/main/resources/structure.png" alt="proj_structure" width="200"/>
+<img src="src/main/resources/structure.png" alt="proj_structure" width="600"/>
 
 L'architettura dell'applicazione è organizzata in modo modulare per separare le responsabilità e facilitare la manutenzione. Ecco una panoramica dei principali componenti:
 
@@ -367,14 +750,15 @@ public ResponseEntity<ErrorResponse> badCredentialsException(BadCredentialsExcep
 3. **Risposte Coerenti**: Tutte le risposte di errore seguono lo stesso formato.
 4. **Sicurezza**: Gli errori non espongono dettagli sensibili del sistema.
 
-## Considerazioni per il Miglioramento
+## Considerazioni per il Amelioration
 
 - Implementare un meccanismo per la traduzione dei messaggi di errore in diverse lingue.
 - Aggiungere più dettagli nei log per facilitare il monitoraggio e l'analisi degli errori in produzione.
 - Considerare l'implementazione di un sistema di notifica per errori critici.
 
 ### Test API con Swagger
+<img src="src/main/resources/swagger.png" alt="Swagger" width="600"/>
 
-Swagger è integrato nell'applicazione per testare le API e visualizzare la documentazione. Puoi accedere a Swagger all'indirizzo `http://localhost:8080/swagger-ui.html`.
+Swagger è integrato nell'applicazione per testare le API e visualizzare la documentazione. 
+Puoi accedere a Swagger all'indirizzo [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
 
-<img src="src/main/resources/swagger.png" alt="Swagger" width="500"/>
