@@ -31,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 new ErrorResponse(ErrorCode.EUN, "User not found with email: " + email)
         ));
     }
-
+    // Caricando user DTO da mandare al client
     public UserDTO loadUser(HttpServletRequest request) {
         User user = getUserFromToken(request);
         return UserDTO.builder()
